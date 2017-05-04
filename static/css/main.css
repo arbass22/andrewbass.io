@@ -1,39 +1,20 @@
 .navbar {
-  background: #800000;
-  border-radius: 0px;
-  vertical-align: bottom; }
-
-.navbar-list {
-  display: inline-block;
-  margin: 0px 0px 12px 65px; }
-
-.navbar-link {
+  background-color: #800000;
   color: white;
-  font-size: 24px;
-  margin-right: 16px; }
+  border: 0px; }
+  .navbar a {
+    color: white; }
+  .navbar .active {
+    background-color: white; }
+    .navbar .active a {
+      color: #800000; }
 
-.navbar-link:hover {
-  color: white;
-  text-decoration: none;
-  border-bottom: white 2px solid;
-  padding-bottom: 5px; }
+.navbar-header {
+  font-size: 32px; }
+  .navbar-header .title {
+    margin-left: 12px; }
 
-.header {
-  font-size: 40px;
-  color: white;
-  margin: 0px 0px 12px 12px;
-  line-height: 1; }
-
-.header, .subtitle, .navbar-list {
-  display: inline-block;
-  vertical-align: bottom; }
-
-.subtitle {
-  color: white;
-  line-height: 1.25;
-  margin: 0px 0px 12px 12px; }
-
-.navbar img {
-  margin: 12px; }
+.icon-bar {
+  background-color: white; }
 
 /*# sourceMappingURL=main.css.map */

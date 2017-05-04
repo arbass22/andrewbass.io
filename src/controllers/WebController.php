@@ -27,7 +27,10 @@ abstract class WebController
   private function getJS(): Set<string> {
     // These are the js files that should be indlude on every page,
     // feel free to include files from a CDN.
-    $set = Set{};
+    $set = Set{
+      "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js",
+      "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+    };
     return $set->addAll($this->getExtraJS());
   }
 

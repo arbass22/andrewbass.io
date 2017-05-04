@@ -4,15 +4,27 @@ class :navbar extends :x:element {
 
   protected function render(): XHPRoot {
     return (
-      <x:frag>
-        <div class="navbar">
-          <div class="container">
-            <main:logo />
-            <div class="header">Andrew Bass</div>
-            <nav:list />
+      <nav class="navbar">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle"
+              data-toggle="collapse" data-target="#collapsing-nav">
+              <span class = "sr-only">Toggle navigation</span>
+              <span class = "icon-bar"></span>
+              <span class = "icon-bar"></span>
+              <span class = "icon-bar"></span>
+            </button>
+            <div class="title">Andrew Bass</div>
+          </div>
+          <div class="navbar-collapse collapse" id="collapsing-nav">
+            <ul class="nav navbar-nav navbar-right">
+              <navbar:item title="Home" href={HomeController::getUriBuilder()->getPath()} active={true}/>
+              <navbar:item title="Projects" href={OtherController::getUriBuilder()->getPath()} />
+              <navbar:item title="Education" href={NotFoundController::getUriBuilder()->getPath()} />
+            </ul>
           </div>
         </div>
-      </x:frag>
+      </nav>
     );
   }
 
