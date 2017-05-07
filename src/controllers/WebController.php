@@ -15,6 +15,10 @@ abstract class WebController
   abstract protected function getTitle(): string;
   abstract protected function genRender(): Awaitable<:xhp>;
 
+  final public function __construct() {
+
+  }
+
   private function getCSS(): Set<string> {
     // These are the css classes that should be included on every page
     $set = Set{

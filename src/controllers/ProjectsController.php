@@ -1,22 +1,22 @@
-<?hh
+<?hh // strict
 
-final class OtherController extends WebController {
+final class ProjectsController extends WebController {
 
   public static function getUriPattern(): Facebook\HackRouter\UriPattern {
     return (new Facebook\HackRouter\UriPattern())
-      ->literal('/other');
+      ->literal('/projects');
   }
 
   <<__Override>>
   protected function getTitle(): string {
-    return "Other Page";
+    return "Projects";
   }
 
   <<__Override>>
   public async function genRender(): Awaitable<:xhp> {
     return (
       <div>
-        <h1>Other page</h1>
+        <h1>Projects</h1>
       </div>
     );
   }

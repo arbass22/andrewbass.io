@@ -6,21 +6,22 @@
  * /home/andrew/sites/andrewbass.io/scripts/build_router.php
  *
  *
- * @generated SignedSource<<2d19dbb8dbbeed862ca17f33a6c12eb0>>
+ * @generated SignedSource<<a85a4014e18c7ef9f049d0ce1ac90d39>>
  */
 
 <<Codegen>>
 final class Router
-  extends \Facebook\HackRouter\BaseRouter<classname<\Facebook\HackRouter\IncludeInUriMap>> {
+  extends \Facebook\HackRouter\BaseRouter<classname<\WebController>> {
 
   <<__Override>>
   final public function getRoutes(
-  ): ImmMap<\Facebook\HackRouter\HttpMethod, ImmMap<string, classname<\Facebook\HackRouter\IncludeInUriMap>>> {
+  ): ImmMap<\Facebook\HackRouter\HttpMethod, ImmMap<string, classname<\WebController>>> {
     $map = ImmMap {
       \Facebook\HackRouter\HttpMethod::GET => ImmMap {
+        '/education' => \EducationController::class,
         '/' => \HomeController::class,
         '/notfound' => \NotFoundController::class,
-        '/other' => \OtherController::class,
+        '/projects' => \ProjectsController::class,
       },
     };
     return $map;

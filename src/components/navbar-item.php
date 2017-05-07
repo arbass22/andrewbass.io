@@ -2,10 +2,11 @@
 
 class :navbar:item extends :x:element {
 
+  // TODO: merge href and controller params
   attribute
     string href @required,
     string title @required,
-    bool active = false;
+    string controller @required;
 
   protected function render(): XHPRoot {
     $item = (
@@ -15,8 +16,9 @@ class :navbar:item extends :x:element {
         </a>
       </li>
     );
-    return (
-      $item->conditionClass($this->:active, "active")
-    );
+
+    $currentController = Request::get()->getController();
+    $item->conditionClass($currentController == $this->:controller, "active");
+    return $item;
   }
 }
