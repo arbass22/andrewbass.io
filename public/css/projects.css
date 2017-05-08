@@ -2,14 +2,18 @@
   border-color: darkgrey;
   color: darkgrey;
   border-width: 2px;
-  font-size: 20px; }
+  font-size: 20px;
+}
 
 .project.item {
-  border: 2px solid; }
+  border: 2px solid;
+}
 .project .title {
-  font-size: 28px; }
+  font-size: 28px;
+}
 
 .btn-icon {
-  width: 18px; }
+  width: 18px;
+}
 
 /*# sourceMappingURL=projects.css.map */
