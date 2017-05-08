@@ -12,11 +12,19 @@ final class ProjectsController extends WebController {
     return "Projects";
   }
 
+  protected function getExtraCSS(): Set<string> {
+    return Set{
+      'css/projects.css'
+    };
+  }
+
   <<__Override>>
   public async function genRender(): Awaitable<:xhp> {
     return (
       <div>
         <h1>Projects</h1>
+        <project:item />
+        <project:item />
       </div>
     );
   }

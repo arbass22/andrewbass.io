@@ -1,0 +1,15 @@
+.btn-outline.btn-github {
+  border-color: darkgrey;
+  color: darkgrey;
+  border-width: 2px;
+  font-size: 20px; }
+
+.project.item {
+  border: 2px solid; }
+.project .title {
+  font-size: 28px; }
+
+.btn-icon {
+  width: 30px; }
+
+/*# sourceMappingURL=projects.css.map */

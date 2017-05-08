@@ -22,10 +22,12 @@ class :navbar extends :x:element {
                 title="Home"
                 href={HomeController::getUriBuilder()->getPath()}
                 controller={HomeController::class} />
+
               <navbar:item
                 title="Projects"
                 href={ProjectsController::getUriBuilder()->getPath()}
                 controller={ProjectsController::class}/>
+              <navbar:item:dropdown/>
               <navbar:item
                 title="Education"
                 href={EducationController::getUriBuilder()->getPath()}
