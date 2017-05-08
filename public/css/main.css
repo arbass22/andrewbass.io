@@ -9,6 +9,8 @@
     background-color: white; }
     .navbar .active a {
       color: #800000; }
+  .navbar .title:hover {
+    text-decoration: none; }
 
 .navbar-header {
   font-size: 32px; }

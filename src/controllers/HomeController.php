@@ -15,7 +15,7 @@ final class HomeController extends WebController {
 
   <<__Override>>
   protected function getTitle(): string {
-    return "HomePage!";
+    return "Andrew Bass";
   }
 
   <<__Override>>

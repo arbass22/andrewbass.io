@@ -14,7 +14,10 @@ class :navbar extends :x:element {
               <span class = "icon-bar"></span>
               <span class = "icon-bar"></span>
             </button>
-            <div class="title">Andrew Bass</div>
+            <a class="title"
+              href={HomeController::getUriBuilder()->getPath()}>
+              Andrew Bass
+            </a>
           </div>
           <div class="navbar-collapse collapse" id="collapsing-nav">
             <ul class="nav navbar-nav navbar-right">

@@ -14,6 +14,9 @@ $nav_color: #800000;
       color: $nav_color;
     }
   }
+  .title:hover {
+    text-decoration: none;
+  }
 }
 
 .navbar-header {
