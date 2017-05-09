@@ -1,3 +1,5 @@
+$project_gray: #e3e3e3;
+
 
 .btn-outline.btn-github {
   border-color: darkgrey;
@@ -7,11 +9,19 @@
 }
 
 .project {
-  &.item {
-    border: 2px solid;
-  }
   & .title {
     font-size: 28px;
+  }
+  &:nth-child(even) {
+    background-color: $project_gray;
+  }
+  &.item {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+  .image {
+    max-width:100%;
+    max-height:100%;
   }
 }
 

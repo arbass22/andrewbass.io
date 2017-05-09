@@ -23,6 +23,7 @@ final class HomeController extends WebController {
     return (
       <div>
         <h1>HomePage</h1>
+        <h3>This website is under construction, please check back later.</h3>
       </div>
     );
   }
