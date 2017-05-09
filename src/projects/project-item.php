@@ -2,17 +2,18 @@
 
 class :project:item extends :x:element {
 
+
   attribute
     string title @required,
-    string description @required,
     enum {"left", "right"} img-align = "right";
+
+  children (:project:description);
 
   protected function render(): XHPRoot {
     $project_content = (
       <div class="col-sm-6">
         <project:title title={$this->:title} />
-        <project:description description={$this->:description}/>
-        <button:github />
+        {$this->getChildren()}
       </div>
     );
 
