@@ -27,7 +27,13 @@ final class ProjectsController extends WebController {
           title="PoliTweet"
           img-align="right">
           <project:description>
-          Project 1
+            At HackBeanpot 2016, I created a webapp that analyzed public tweets about
+            the current presidential primary candidates.  Using the Twitter Streaming API,
+            we used websockets to push the conents to a ReactJS client as well as ran the
+            text throught Indico's sentiment API.  We used D3 to graph how the average sentiment
+            for each candidate changed over time. <br/>
+            <button:github />
+            <button:github />
           </project:description>
         </project:item>
         <project:item
@@ -35,7 +41,6 @@ final class ProjectsController extends WebController {
           img-align="left">
           <project:description>
           Project 2
-          <button:github />
           </project:description>
         </project:item>
 

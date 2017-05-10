@@ -1,8 +1,10 @@
 .btn-outline.btn-github {
-  border-color: darkgrey;
   color: darkgrey;
+  font-size: 16px;
+  padding: 4px 10px;
   border-width: 2px;
-  font-size: 20px;
+  border-color: darkgrey;
+  border-radius: 0px;
 }
 
 .project .title {
