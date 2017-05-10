@@ -7,7 +7,7 @@ class :project:title extends :x:element {
 
   protected function render(): XHPRoot {
     return (
-      <div class="title">{$this->:title}</div>
+      <div class="title">{$this->:title}{$this->getChildren()}</div>
     );
   }
 }

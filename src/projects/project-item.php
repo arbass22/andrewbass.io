@@ -4,15 +4,13 @@ class :project:item extends :x:element {
 
 
   attribute
-    string title @required,
     enum {"left", "right"} img-align = "right";
 
-  children (:project:description);
+  children (:project:title, :project:description);
 
   protected function render(): XHPRoot {
     $project_content = (
       <div class="col-sm-6">
-        <project:title title={$this->:title} />
         {$this->getChildren()}
       </div>
     );

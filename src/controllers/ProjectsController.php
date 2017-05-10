@@ -24,21 +24,30 @@ final class ProjectsController extends WebController {
       <div>
         <h1>Projects</h1>
         <project:item
-          title="PoliTweet"
           img-align="right">
+          <project:title
+            title="PoliTweet2">
+            <div class="label label-default">Finalist</div>
+            <span class="label label-success">Best UI/UX</span>
+          </project:title>
           <project:description>
-            At HackBeanpot 2016, I created a webapp that analyzed public tweets about
+
+            <div>
+            {"At HackBeanpot 2016, I created a webapp that analyzed public tweets about
             the current presidential primary candidates.  Using the Twitter Streaming API,
             we used websockets to push the conents to a ReactJS client as well as ran the
             text throught Indico's sentiment API.  We used D3 to graph how the average sentiment
-            for each candidate changed over time. <br/>
+            for each candidate changed over time."}
+            </div>
             <button:github />
             <button:github />
           </project:description>
         </project:item>
         <project:item
-          title="Internet Garage"
           img-align="left">
+          <project:title
+            title="PoliTweet2">
+          </project:title>
           <project:description>
           Project 2
           </project:description>
