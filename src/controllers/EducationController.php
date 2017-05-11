@@ -1,9 +1,12 @@
 <?hh // strict
 
+use Facebook\HackRouter\UriPattern;
+
 final class EducationController extends WebController {
 
-  public static function getUriPattern(): Facebook\HackRouter\UriPattern {
-    return (new Facebook\HackRouter\UriPattern())
+  <<__Override>>
+  public static function getUriPattern(): UriPattern {
+    return (new UriPattern())
       ->literal('/education');
   }
 
