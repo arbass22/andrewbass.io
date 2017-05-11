@@ -12,6 +12,11 @@ final class HomeController extends WebController {
       ->literal('/');
   }
 
+  <<__Override>>
+  public function getExtraCSS(): Set<string> {
+    return Set{"css/homepage.css"};
+  }
+
 
   <<__Override>>
   protected function getTitle(): string {
@@ -21,8 +26,11 @@ final class HomeController extends WebController {
   <<__Override>>
   public async function renderContent(): Awaitable<:xhp> {
     return (
-      <div>
-        <h1>HomePage</h1>
+      <div class="homepage background">
+        <div class="text-center profile">
+        <h1>Andrew Bass</h1>
+        <img src="images/andrew.jpg"/>
+        </div>
         <h3>This website is under construction, please check back later.</h3>
       </div>
     );

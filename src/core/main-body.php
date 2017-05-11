@@ -5,7 +5,7 @@ class :main:body extends :x:element {
   protected function render(): XHPRoot {
     return (
       <body>
-          {$this->getChildren()}
+        {$this->getChildren()}
       </body>
     );
   }

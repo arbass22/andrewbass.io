@@ -1,5 +1,5 @@
 .navbar {
-  background-color: #800000;
+  background-color: #588C7E;
   color: white;
   border: 0px;
   border-radius: 0px;
@@ -11,7 +11,7 @@
   background-color: white;
 }
 .navbar .active a {
-  color: #800000;
+  color: #588C7E;
 }
 .navbar .title:hover {
   text-decoration: none;
@@ -30,6 +30,21 @@
 
 .icon-bar {
   background-color: white;
+}
+
+.homepage img {
+  width: 300px;
+  overflow: hidden;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 150px;
+  border: 5px solid darkgrey;
+  display: inline-block;
+}
+.homepage h1 {
+  font-size: 54px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /*# sourceMappingURL=main.css.map */

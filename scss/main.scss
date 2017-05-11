@@ -1,4 +1,12 @@
-$nav_color: #800000;
+$orange: #F2AE72;
+$brown: #8C4646;
+$red: #D96459;
+$yellow: #F2E394;
+$green: #588C7E;
+
+$nav_color: $green;
+$background: $orange;
+
 
 .navbar {
   background-color: $nav_color;
@@ -32,4 +40,24 @@ $nav_color: #800000;
 
 .icon-bar {
   background-color: white;
+}
+
+.homepage {
+  &.background {
+
+  }
+  img {
+    width: 300px;
+    overflow:hidden;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 150px;
+    border:5px solid darkgrey;
+    display:inline-block;
+  }
+  h1 {
+    font-size: 54px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
