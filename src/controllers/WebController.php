@@ -67,12 +67,20 @@ abstract class WebController
       </head>;
   }
 
-  final public function renderTotalPage(): void {
+  public final async function genBody(): Awaitable<:xhp> {
+    $content = await $this->genRender();
+    return (
+      <body>
+        <navbar/>
+        {$content}
+      </body>
+    );
+  }
+
+  final public async function renderTotalPage(): Awaitable<void> {
     echo "<!DOCTYPE html>";
     echo $this->getHead();
-    echo "<body>";
-    echo <navbar/>;
-    echo \HH\Asio\join($this->genRender());
-    echo "</body>";
+    $page = await $this->genBody();
+    echo $page;
   }
 }
