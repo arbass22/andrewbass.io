@@ -24,7 +24,17 @@ final class ProjectsController extends WebController {
   public async function renderContent(): Awaitable<:xhp> {
     return (
       <x:frag>
-        <h1>Projects</h1>
+        <div class="container">
+          <div class="row">
+            <h2 class="projects">Projects</h2>
+            <div>
+            {"Below are some my past and ongoing projects.  The source code is availble
+              for many of them.  I enjoy using hackathons to learn and experiment with
+              new technologies, and as such some of the projects are not polished or hosted
+              anywhere."}
+            </div>
+          </div>
+        </div>
         <project:item
           img-align="right">
           <project:title

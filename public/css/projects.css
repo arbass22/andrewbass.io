@@ -27,6 +27,9 @@
   margin-right: 8px;
   display: inline-block;
 }
+.project h2 {
+  margin-top: 0px;
+}
 
 .btn-icon {
   width: 18px;
