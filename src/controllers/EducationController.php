@@ -16,7 +16,7 @@ final class EducationController extends WebController {
   }
 
   <<__Override>>
-  public async function genRender(): Awaitable<:xhp> {
+  public async function renderContent(): Awaitable<:xhp> {
     return (
       <div>
         <h1>Education</h1>

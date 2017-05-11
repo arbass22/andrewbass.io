@@ -8,16 +8,13 @@ use Facebook\HackRouter\{
 };
 
 abstract class WebController
-  implements IncludeInUriMap, HasUriPattern, SupportsGetRequests {
+  implements IncludeInUriMap, HasUriPattern, SupportsGetRequests, IRender {
 
   use GetUriBuilderFromUriPattern;
 
+  final public function __construct() {}
+
   abstract protected function getTitle(): string;
-  abstract protected function genRender(): Awaitable<:xhp>;
-
-  final public function __construct() {
-
-  }
 
   private function getCSS(): Set<string> {
     // These are the css classes that should be included on every page
@@ -67,20 +64,32 @@ abstract class WebController
       </head>;
   }
 
-  public final async function genBody(): Awaitable<:xhp> {
-    $content = await $this->genRender();
+  <<__Override>>
+  public async function renderPage(): Awaitable<:xhp> {
+    $content = await $this->renderContent();
     return (
-      <body>
+     <div class="container">
+       {$content}
+     </div>
+    );
+  }
+
+  public final async function renderBody(): Awaitable<:xhp> {
+    $content = await $this->renderPage();
+    return (
+      <x:frag>
         <navbar/>
-        {$content}
-      </body>
+        <main:body>
+          {$content}
+        </main:body>
+      </x:frag>
     );
   }
 
   final public async function renderTotalPage(): Awaitable<void> {
     echo "<!DOCTYPE html>";
     echo $this->getHead();
-    $page = await $this->genBody();
+    $page = await $this->renderBody();
     echo $page;
   }
 }

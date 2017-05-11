@@ -19,7 +19,7 @@ final class HomeController extends WebController {
   }
 
   <<__Override>>
-  public async function genRender(): Awaitable<:xhp> {
+  public async function renderContent(): Awaitable<:xhp> {
     return (
       <div>
         <h1>HomePage</h1>

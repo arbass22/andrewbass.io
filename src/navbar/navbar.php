@@ -30,7 +30,6 @@ class :navbar extends :x:element {
                 title="Projects"
                 href={ProjectsController::getUriBuilder()->getPath()}
                 controller={ProjectsController::class}/>
-              <navbar:item:dropdown/>
               <navbar:item
                 title="Education"
                 href={EducationController::getUriBuilder()->getPath()}

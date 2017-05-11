@@ -2,6 +2,8 @@
 
 final class ProjectsController extends WebController {
 
+  use NoMarginPage;
+
   public static function getUriPattern(): Facebook\HackRouter\UriPattern {
     return (new Facebook\HackRouter\UriPattern())
       ->literal('/projects');
@@ -19,9 +21,9 @@ final class ProjectsController extends WebController {
   }
 
   <<__Override>>
-  public async function genRender(): Awaitable<:xhp> {
+  public async function renderContent(): Awaitable<:xhp> {
     return (
-      <div>
+      <x:frag>
         <h1>Projects</h1>
         <project:item
           img-align="right">
@@ -57,8 +59,7 @@ final class ProjectsController extends WebController {
               and desktop."}
           </project:description>
         </project:item>
-
-      </div>
+      </x:frag>
     );
   }
 
