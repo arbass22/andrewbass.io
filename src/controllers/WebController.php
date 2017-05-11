@@ -32,6 +32,7 @@ abstract class WebController
     // These are the js files that should be indlude on every page,
     // feel free to include files from a CDN.
     $set = Set{
+      "js/GoogleAnalytics.js",
       "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js",
       "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
     };
@@ -53,7 +54,7 @@ abstract class WebController
       ($css) ==> <link rel="stylesheet" type="text/css" href={$css} />
     );
     $js = $this->getJS()->toVector()->map(
-      ($js) ==> <script src={$js} />
+      ($js) ==> <script type="application/javascript" src={$js} />
     );
 
     return
@@ -69,7 +70,9 @@ abstract class WebController
   final public function renderTotalPage(): void {
     echo "<!DOCTYPE html>";
     echo $this->getHead();
+    echo "<body>";
     echo <navbar/>;
     echo \HH\Asio\join($this->genRender());
+    echo "</body>";
   }
 }

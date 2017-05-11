@@ -26,12 +26,11 @@ final class ProjectsController extends WebController {
         <project:item
           img-align="right">
           <project:title
-            title="PoliTweet2">
+            title="PoliTweet">
             <div class="label label-default">Finalist</div>
-            <span class="label label-success">Best UI/UX</span>
+            <div class="label label-success">Best UI/UX</div>
           </project:title>
           <project:description>
-
             <div>
             {"At HackBeanpot 2016, I created a webapp that analyzed public tweets about
             the current presidential primary candidates.  Using the Twitter Streaming API,
@@ -46,10 +45,16 @@ final class ProjectsController extends WebController {
         <project:item
           img-align="left">
           <project:title
-            title="PoliTweet2">
+            title="This Site">
           </project:title>
           <project:description>
-          Project 2
+            {"I made this website to give myself an online presence. I can add links
+              to projects I am working on, experiment with web technologies, and
+              perhaps in the future add a blog. It is built using HHVM, Facebook's
+              PHP-esq server, and is running on a DigitalOcean droplet behind an nginx
+              reverse-proxy.  I have installed SSL certificates provided by Let's Encrypt.
+              I have worked to make it as responsive as possibe, try viewing it on mobile
+              and desktop."}
           </project:description>
         </project:item>
 
