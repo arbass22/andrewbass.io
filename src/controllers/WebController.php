@@ -81,6 +81,7 @@ abstract class WebController
         <navbar/>
         <main:body>
           {$content}
+          <main:footer/>
         </main:body>
       </x:frag>
     );

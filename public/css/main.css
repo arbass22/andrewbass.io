@@ -47,4 +47,18 @@
   margin-right: auto;
 }
 
+hr {
+  border-color: #588C7E;
+  margin-bottom: 2px;
+}
+
+.footer {
+  opacity: .5;
+  color: #588C7E;
+  margin-bottom: 12px;
+}
+.footer .copyright {
+  margin-left: 12px;
+}
+
 /*# sourceMappingURL=main.css.map */
